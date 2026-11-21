@@ -16,22 +16,6 @@ DATA_DIR = ROOT_DIR / "data" / "processed"
 POWERBI_DIR = ROOT_DIR / "data" / "powerbi_export"
 ARTIFACTS_DIR = ROOT_DIR / "models_artifacts"
 
-@st.cache_data(ttl=3600)
-def load_all_processed_data():
-    """Loads all processed datasets into memory with caching."""
-    tables = [
-        "suppliers", "manufacturing_lots", "batteries",
-        "vehicles", "riders", "trips", "deliveries",
-        "transactions", "rider_activity_daily"
-    ]
-    data = {}
-    for t in tables:
-        path = os.path.join(DATA_DIR, f"{t}.csv")
-        if os.path.exists(path):
-            data[t] = pd.read_csv(path)
-        else:
-            data[t] = pd.DataFrame()
-    return data
 
 @st.cache_data(ttl=3600)
 def load_all_processed_data():
