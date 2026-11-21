@@ -20,18 +20,30 @@ ARTIFACTS_DIR = ROOT_DIR / "models_artifacts"
 @st.cache_data(ttl=3600)
 def load_all_processed_data():
     """Load all processed CSV tables into a dictionary."""
+    
+    # Temporary debug (will show on the app)
+    st.write("DEBUG → ROOT_DIR:", ROOT_DIR)
+    st.write("DEBUG → DATA_DIR:", DATA_DIR)
+    st.write("DEBUG → DATA_DIR exists?:", DATA_DIR.exists())
+    
     data = {}
 
     if not DATA_DIR.exists():
+        st.error("data/processed folder not found!")
         return data
 
-    for f in DATA_DIR.iterdir():
+    files = list(DATA_DIR.iterdir())
+    st.write("DEBUG → Files found:", [f.name for f in files])
+
+    for f in files:
         if f.suffix.lower() == ".csv":
             key = f.stem
             try:
-                data[key] = pd.read_csv(f)
+                df = pd.read_csv(f)
+                data[key] = df
+                st.write(f"Loaded {key}: {len(df)} rows")
             except Exception as e:
-                st.warning(f"Failed to load {f.name}: {e}")
+                st.error(f"Failed to load {f.name}: {e}")
 
     return data
 
@@ -66,4 +78,3 @@ def load_model_metadata():
         with open(meta_path, "r") as f:
             return json.load(f)
     return {}
-
