@@ -66,5 +66,3 @@ def load_model_metadata():
         with open(meta_path, "r") as f:
             return json.load(f)
     return {}
-
-
