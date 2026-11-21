@@ -1,0 +1,7 @@
+delivery_status,delivery_count,pct_of_total_deliveries,avg_distance_km,avg_order_value,avg_duration_min,avg_rating
+COMPLETED,4614,94.28,9.02,664.56,36.5,4.55
+FAILED_VEHICLE_BREAKDOWN,92,1.88,8.84,631.54,75.2,
+FAILED_TRAFFIC_DELAY,73,1.49,8.94,703.85,77.2,
+FAILED_BATTERY_DEPLETED,49,1.0,9.87,659.74,78.1,
+FAILED_CUSTOMER_UNREACHABLE,49,1.0,10.08,651.82,80.0,
+CANCELLED,17,0.35,7.91,609.19,78.2,

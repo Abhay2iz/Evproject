@@ -1,0 +1,4 @@
+tier,total_active_cohort_size,retained_day_7,d7_retention_pct,retained_day_14,d14_retention_pct,retained_day_30,d30_retention_pct
+STANDARD,259,17,6.56,12,4.63,17,6.56
+PREMIUM,110,2,1.82,5,4.55,6,5.45
+PRO,51,2,3.92,3,5.88,1,1.96

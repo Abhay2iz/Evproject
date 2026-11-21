@@ -1,0 +1,9 @@
+supplier_id,supplier_name,country,rating,tier,contact_email,contract_start_date,created_at
+SUP-001,VoltCell Innovations,South Korea,4.8,Tier-1,ops@voltcell.kr,2024-01-15,2026-11-21 10:04:17
+SUP-002,ElectroPower Mobility,Japan,4.7,Tier-1,b2b@electropower.jp,2024-03-01,2026-11-21 10:04:17
+SUP-003,AmpereDrive Systems,India,4.2,Tier-2,fleet@amperedrive.in,2024-06-10,2026-11-21 10:04:17
+SUP-004,Zenith Energy Tech,Taiwan,4.1,Tier-2,sales@zenithenergy.tw,2024-08-20,2026-11-21 10:04:17
+SUP-005,GreenCharge Labs,China,3.4,Tier-3,service@greenchargelabs.cn,2024-09-05,2026-11-21 10:04:17
+SUP-006,NexGen Energy Storage,India,3.6,Tier-3,support@nexgenstorage.in,2024-11-15,2026-11-21 10:04:17
+SUP-007,Titan Fleet Motors,Germany,4.6,Tier-1,fleet@titanmotors.de,2024-02-01,2026-11-21 10:04:17
+SUP-008,Apex EV Dynamics,India,4.0,Tier-2,sales@apexev.in,2024-05-18,2026-11-21 10:04:17

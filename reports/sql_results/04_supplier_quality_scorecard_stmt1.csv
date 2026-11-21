@@ -1,0 +1,9 @@
+supplier_id,supplier_name,country,tier,supplier_audit_rating,total_lots_produced,avg_lot_defect_rate_pct,total_batteries_supplied,avg_battery_soh,avg_internal_resistance,degraded_rate_pct,supplier_procurement_action,quality_rank
+SUP-002,ElectroPower Mobility,Japan,Tier-1,4.7,3,1.09,79,76.02,52.36,40.51,HIGH_RISK_WARRANTY_REVIEW,1
+SUP-003,AmpereDrive Systems,India,Tier-2,4.2,3,3.813,74,75.11,53.4,45.95,HIGH_RISK_WARRANTY_REVIEW,2
+SUP-008,Apex EV Dynamics,India,Tier-2,4.0,5,3.082,114,73.85,54.42,58.77,HIGH_RISK_WARRANTY_REVIEW,3
+SUP-004,Zenith Energy Tech,Taiwan,Tier-2,4.1,4,3.573,80,73.39,55.18,62.5,HIGH_RISK_WARRANTY_REVIEW,4
+SUP-007,Titan Fleet Motors,Germany,Tier-1,4.6,5,1.696,128,73.35,55.19,68.75,HIGH_RISK_WARRANTY_REVIEW,5
+SUP-001,VoltCell Innovations,South Korea,Tier-1,4.8,5,1.696,120,72.68,55.93,70.0,HIGH_RISK_WARRANTY_REVIEW,6
+SUP-006,NexGen Energy Storage,India,Tier-3,3.6,5,8.262,131,70.89,57.5,81.68,HIGH_RISK_WARRANTY_REVIEW,7
+SUP-005,GreenCharge Labs,China,Tier-3,3.4,3,7.997,74,70.07,58.98,83.78,HIGH_RISK_WARRANTY_REVIEW,8

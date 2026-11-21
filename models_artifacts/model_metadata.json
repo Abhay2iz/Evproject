@@ -1,0 +1,305 @@
+{
+  "generated_at": "2026-11-21 10:04:50",
+  "training_duration_seconds": 1.7,
+  "models": {
+    "rider_churn": {
+      "task": "binary_classification",
+      "champion_model": "XGBoost",
+      "metrics": {
+        "precision": 0.8261,
+        "recall": 0.9744,
+        "f1_score": 0.8941,
+        "roc_auc": 0.5837,
+        "pr_auc": 0.8764,
+        "confusion_matrix": [
+          [
+            0,
+            16
+          ],
+          [
+            2,
+            76
+          ]
+        ]
+      },
+      "benchmarks": {
+        "Logistic Regression": {
+          "precision": 0.8,
+          "recall": 0.6667,
+          "f1_score": 0.7273,
+          "roc_auc": 0.4423,
+          "pr_auc": 0.8083,
+          "confusion_matrix": [
+            [
+              3,
+              13
+            ],
+            [
+              26,
+              52
+            ]
+          ]
+        },
+        "Random Forest": {
+          "precision": 0.8158,
+          "recall": 0.7949,
+          "f1_score": 0.8052,
+          "roc_auc": 0.4495,
+          "pr_auc": 0.812,
+          "confusion_matrix": [
+            [
+              2,
+              14
+            ],
+            [
+              16,
+              62
+            ]
+          ]
+        },
+        "XGBoost": {
+          "precision": 0.8261,
+          "recall": 0.9744,
+          "f1_score": 0.8941,
+          "roc_auc": 0.5837,
+          "pr_auc": 0.8764,
+          "confusion_matrix": [
+            [
+              0,
+              16
+            ],
+            [
+              2,
+              76
+            ]
+          ]
+        }
+      },
+      "top_features": [
+        {
+          "feature": "tier_PRO",
+          "importance": 0.1225738525390625
+        },
+        {
+          "feature": "active_days_30d",
+          "importance": 0.1000601053237915
+        },
+        {
+          "feature": "tenure_days_at_cutoff",
+          "importance": 0.0822393000125885
+        },
+        {
+          "feature": "city_Pune",
+          "importance": 0.07230786234140396
+        },
+        {
+          "feature": "rating_avg",
+          "importance": 0.07156240195035934
+        }
+      ]
+    },
+    "battery_degradation": {
+      "task": "regression",
+      "target": "current_soh_pct",
+      "champion_model": "Random Forest Regressor",
+      "metrics": {
+        "mae": 1.1205,
+        "rmse": 1.3945,
+        "r2_score": 0.8685
+      },
+      "benchmarks": {
+        "Random Forest Regressor": {
+          "mae": 1.1205,
+          "rmse": 1.3945,
+          "r2_score": 0.8685
+        },
+        "XGBoost Regressor": {
+          "mae": 1.1839,
+          "rmse": 1.4601,
+          "r2_score": 0.8559
+        }
+      },
+      "top_features": [
+        {
+          "feature": "internal_resistance_m_ohm",
+          "importance": 0.9075752361152737
+        },
+        {
+          "feature": "max_temp_celsius_recorded",
+          "importance": 0.0451015349600644
+        },
+        {
+          "feature": "battery_age_days",
+          "importance": 0.018027763336035455
+        },
+        {
+          "feature": "cycle_count",
+          "importance": 0.015844261325883093
+        },
+        {
+          "feature": "defect_rate_estimate",
+          "importance": 0.005206465944919163
+        }
+      ]
+    },
+    "delivery_failure": {
+      "task": "binary_classification",
+      "champion_model": "XGBoost",
+      "metrics": {
+        "precision": 0.0682,
+        "recall": 0.1053,
+        "f1_score": 0.0828,
+        "roc_auc": 0.4978,
+        "pr_auc": 0.0655,
+        "confusion_matrix": [
+          [
+            840,
+            82
+          ],
+          [
+            51,
+            6
+          ]
+        ]
+      },
+      "benchmarks": {
+        "Logistic Regression": {
+          "precision": 0.059,
+          "recall": 0.4211,
+          "f1_score": 0.1034,
+          "roc_auc": 0.481,
+          "pr_auc": 0.0605,
+          "confusion_matrix": [
+            [
+              539,
+              383
+            ],
+            [
+              33,
+              24
+            ]
+          ]
+        },
+        "Random Forest": {
+          "precision": 0.0576,
+          "recall": 0.1404,
+          "f1_score": 0.0816,
+          "roc_auc": 0.4832,
+          "pr_auc": 0.0604,
+          "confusion_matrix": [
+            [
+              791,
+              131
+            ],
+            [
+              49,
+              8
+            ]
+          ]
+        },
+        "XGBoost": {
+          "precision": 0.0682,
+          "recall": 0.1053,
+          "f1_score": 0.0828,
+          "roc_auc": 0.4978,
+          "pr_auc": 0.0655,
+          "confusion_matrix": [
+            [
+              840,
+              82
+            ],
+            [
+              51,
+              6
+            ]
+          ]
+        }
+      },
+      "temporal_split": {
+        "train_start": "2025-11-16 10:11:10",
+        "train_end": "2026-10-16 12:56:47",
+        "test_start": "2026-10-16 12:58:29",
+        "test_end": "2026-11-15 16:53:48"
+      },
+      "top_features": [
+        {
+          "feature": "city_Mumbai",
+          "importance": 0.08308035880327225
+        },
+        {
+          "feature": "city_Bangalore",
+          "importance": 0.07936370372772217
+        },
+        {
+          "feature": "current_soh_pct",
+          "importance": 0.07873956859111786
+        },
+        {
+          "feature": "city_Hyderabad",
+          "importance": 0.06592289358377457
+        },
+        {
+          "feature": "day_of_week",
+          "importance": 0.06347457319498062
+        }
+      ]
+    },
+    "rider_segmentation": {
+      "task": "unsupervised_clustering",
+      "algorithm": "KMeans",
+      "n_clusters": 4,
+      "silhouette_score": 0.1919,
+      "davies_bouldin_score": 1.691,
+      "personas": [
+        {
+          "cluster_id": 0,
+          "persona_name": "Peak Hustlers (High Earnings & Peak Hour Focus)",
+          "rider_count": 108,
+          "share_pct": 26.5,
+          "mean_daily_hours": 4.4,
+          "mean_deliveries": 5.5,
+          "mean_earnings": 530.49,
+          "mean_rating": 4.43,
+          "mean_failure_rate": 0.035,
+          "mean_peak_ratio": 0.55
+        },
+        {
+          "cluster_id": 1,
+          "persona_name": "Steady Full-Timers (High Daily Hours & High Reliability)",
+          "rider_count": 48,
+          "share_pct": 11.8,
+          "mean_daily_hours": 6.36,
+          "mean_deliveries": 25.6,
+          "mean_earnings": 808.28,
+          "mean_rating": 4.52,
+          "mean_failure_rate": 0.063,
+          "mean_peak_ratio": 0.55
+        },
+        {
+          "cluster_id": 2,
+          "persona_name": "Casual Flexible Riders (Low Hours, Supplementary Income)",
+          "rider_count": 115,
+          "share_pct": 28.2,
+          "mean_daily_hours": 7.69,
+          "mean_deliveries": 12.9,
+          "mean_earnings": 1177.09,
+          "mean_rating": 4.51,
+          "mean_failure_rate": 0.028,
+          "mean_peak_ratio": 0.54
+        },
+        {
+          "cluster_id": 3,
+          "persona_name": "At-Risk Low Earners (High Failure Rate & Low Satisfaction)",
+          "rider_count": 137,
+          "share_pct": 33.6,
+          "mean_daily_hours": 7.37,
+          "mean_deliveries": 8.2,
+          "mean_earnings": 809.81,
+          "mean_rating": 4.61,
+          "mean_failure_rate": 0.079,
+          "mean_peak_ratio": 0.55
+        }
+      ]
+    }
+  }
+}

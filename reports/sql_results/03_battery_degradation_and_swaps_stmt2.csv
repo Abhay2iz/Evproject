@@ -1,0 +1,6 @@
+thermal_stress_tier,battery_count,min_temp_c,max_temp_c,avg_soh_pct,avg_resistance_mohm,avg_soh_loss_per_100_cycles
+1,160,32.0,35.8,74.11,52.71,2.491
+2,160,35.8,40.1,75.51,53.08,2.472
+3,160,40.1,43.9,73.48,55.6,2.58
+4,160,43.9,47.9,71.99,57.24,2.732
+5,160,48.0,51.9,70.14,58.74,2.906
