@@ -8,9 +8,13 @@ import joblib
 import pandas as pd
 import streamlit as st
 
-DATA_DIR = "/workspace/data/processed"
-POWERBI_DIR = "/workspace/data/powerbi_export"
-ARTIFACTS_DIR = "/workspace/models_artifacts"
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+
+DATA_DIR = ROOT_DIR / "data" / "processed"
+POWERBI_DIR = ROOT_DIR / "data" / "powerbi_export"
+ARTIFACTS_DIR = ROOT_DIR / "models_artifacts"
 
 @st.cache_data(ttl=3600)
 def load_all_processed_data():
