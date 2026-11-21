@@ -34,6 +34,16 @@ def load_all_processed_data():
     return data
 
 @st.cache_data(ttl=3600)
+def load_all_processed_data():
+
+    st.write("ROOT DIR:", ROOT_DIR)
+    st.write("DATA DIR:", DATA_DIR)
+    st.write("DATA DIR EXISTS:", DATA_DIR.exists())
+
+    if DATA_DIR.exists():
+        st.write("FILES FOUND:", [f.name for f in DATA_DIR.iterdir()])
+
+    # Keep your existing function code below
 def load_powerbi_data():
     """Loads Power BI semantic fact and dimension tables."""
     data = {}
