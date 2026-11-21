@@ -27,7 +27,7 @@ def load_all_processed_data():
 
     for f in DATA_DIR.iterdir():
         if f.suffix.lower() == ".csv":
-            key = f.stem  # filename without .csv
+            key = f.stem
             try:
                 data[key] = pd.read_csv(f)
             except Exception as e:
@@ -38,7 +38,7 @@ def load_all_processed_data():
 
 def load_powerbi_data():
     """Loads Power BI semantic fact and dimension tables."""
-    data data = {}
+    data = {}
     if os.path.exists(POWERBI_DIR):
         for f in os.listdir(POWERBI_DIR):
             if f.endswith(".csv"):
@@ -66,3 +66,4 @@ def load_model_metadata():
         with open(meta_path, "r") as f:
             return json.load(f)
     return {}
+
