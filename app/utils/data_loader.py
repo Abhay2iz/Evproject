@@ -17,30 +17,35 @@ POWERBI_DIR = ROOT_DIR / "data" / "powerbi_export"
 ARTIFACTS_DIR = ROOT_DIR / "models_artifacts"
 
 
+@st.cache_data(ttl=3600)
 def load_all_processed_data():
     """Load all processed CSV tables into a dictionary."""
     data = {}
-    
+
     if not DATA_DIR.exists():
         return data
 
     for f in DATA_DIR.iterdir():
         if f.suffix.lower() == ".csv":
-            key = f.stem  # filename without .csv (riders, batteries, etc.)
+            key = f.stem  # filename without .csv
             try:
                 data[key] = pd.read_csv(f)
             except Exception as e:
                 st.warning(f"Failed to load {f.name}: {e}")
-    
+
     return data
+
+
+def load_powerbi_data():
     """Loads Power BI semantic fact and dimension tables."""
-    data = {}
+    data data = {}
     if os.path.exists(POWERBI_DIR):
         for f in os.listdir(POWERBI_DIR):
             if f.endswith(".csv"):
                 key = f.replace(".csv", "")
                 data[key] = pd.read_csv(os.path.join(POWERBI_DIR, f))
     return data
+
 
 @st.cache_resource
 def load_model_artifacts():
@@ -52,6 +57,7 @@ def load_model_artifacts():
             models[m] = joblib.load(p)
     return models
 
+
 @st.cache_data(ttl=3600)
 def load_model_metadata():
     """Loads model training metadata JSON."""
@@ -60,3 +66,5 @@ def load_model_metadata():
         with open(meta_path, "r") as f:
             return json.load(f)
     return {}
+
+
