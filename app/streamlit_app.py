@@ -4,7 +4,10 @@ EV Fleet & Rider Intelligence System - Main Application Entrypoint.
 
 import sys
 import os
-sys.path.insert(0, "/workspace")
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DIR))
 
 import streamlit as st
 import pandas as pd
