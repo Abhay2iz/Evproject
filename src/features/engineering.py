@@ -11,8 +11,10 @@ import os
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+from pathlib import Path
 
-DATA_DIR = "/workspace/data/processed"
+ROOT_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = ROOT_DIR / "data" / "processed"
 
 def build_churn_features(cutoff_date_str="2026-07-01", horizon_days=45):
     """
